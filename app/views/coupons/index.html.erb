@@ -1,0 +1,9 @@
+<div>/<% @coupons.each do |coupon| %>
+    <% if @coupons.last == coupon %>
+        <%= coupon.store %>
+        <%= link_to coupon.coupon_code, coupon_path(coupon) %>
+    <% else %>
+        <%= coupon.store %>
+        <%= link_to coupon.coupon_code, coupon_path(coupon) %>|
+    <% end %>
+<% end %>/</div> 
